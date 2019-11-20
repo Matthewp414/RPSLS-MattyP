@@ -9,5 +9,9 @@ namespace RPSLS
     class HumanUser : Hand 
     {
 
+        public HumanUser()
+        {
+
+        }
     }
 }

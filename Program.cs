@@ -10,8 +10,11 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
+            HumanUser player1 = new HumanUser();
+            HumanUser player2 = new HumanUser();
+            BotUser bot = new BotUser();
 
-
+            
         }
     }
 }

@@ -10,7 +10,10 @@ namespace RPSLS
     class Hand 
     {
         List<string> moves;
-        int score = 0;
+        public int score = 0;
+        string move;
+        
+
 
         public Hand()
         {
@@ -20,11 +23,15 @@ namespace RPSLS
             moves.Add("Lizard");
             moves.Add("Spock");
             
-
+            
         }
 
 
-
+        public virtual void ChooseMove()
+        {
+            Console.WriteLine("What move?");
+            move = Console.ReadLine();
+        }
 
     }
 }

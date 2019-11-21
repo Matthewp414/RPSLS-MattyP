@@ -10,9 +10,50 @@ namespace RPSLS
     {
         public Game()
         {
+            Hand player1;
+            Hand player2; 
 
         }
 
+        public void GetPlayersChoice()
+        {
+            Conosle.WriteLine("Would you like to play with a 'bot' or another 'player' ");
+            return Console.ReadLine();
+        }
+        
+        
+        public void MakePlayers(choice)
+        {
+           switch (choice)
+           {
+
+                    case "bot":
+                        
+                        Console.WriteLine("You Weigh 150");
+                        
+                        validWeightChoice = true;
+
+
+                        break;
+
+                    case "player":
+                        
+                        Console.WriteLine("You Weigh 185");
+                        
+                        validChoice = true;
+
+
+                        break;
+
+                    default:
+
+                       validChoice = false;
+
+                        break;
+           }
+
+                
+        }
 
         public void CheckPoint(string move1, string move2)
         {
@@ -22,13 +63,14 @@ namespace RPSLS
                 Console.ReadLine();
 
             }
-            else if ((move1 == "rock" && move2 == "rock") || (move1 == "spock" && move2 == "spock") || (move1 == "scissors" && move2 == "scissors") || (move1 == "paper" && move2 == "paper") || (move1 == "lizard" && move2 == "lizard")
+            else if ((move1 == "rock" && move2 == "rock") || (move1 == "spock" && move2 == "spock") || (move1 == "scissors" && move2 == "scissors") || (move1 == "paper" && move2 == "paper") || (move1 == "lizard" && move2 == "lizard"))
+            { 
             Console.WriteLine("Draw");
             Console.ReadLine();
+            }
+            else
             {
-
-
-
+                Console.WriteLine("Player 2 wins");
             }
 
 
@@ -36,6 +78,10 @@ namespace RPSLS
         }
 
 
+
     }
 
+
 }
+
+

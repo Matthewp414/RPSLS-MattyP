@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace RPSLS
 {
 
-    class Hand 
+    class Hand
     {
         List<string> moves;
-        public int score = 0;
+        public int score = 0; 
         string move;
         
 

@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    int moveChoice;
     class BotUser : Hand
-    {
+    {    
+       
+    
         
         public override void ChooseMove()
         {
-            moveChoice = Roll(1, 5);
-            return moveList[moveChoice];
+            Random random = new Random();  
+            move = moveList[random.Next(1,5)];
             
+            
+           
+            ;
+              
+               
+            
+            
+              
 
         }
-        public int Roll(int min, int max)  
-        {  
-            Random random = new Random();  
-            return random.Next(min,max );  
-        }  
+       
     }
 }

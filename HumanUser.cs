@@ -8,9 +8,48 @@ namespace RPSLS
 {
     class HumanUser : Hand 
     {
+        public bool validChoice;
 
         public HumanUser()
         {
+
+        }
+        public override void ChooseMove()
+        {
+            Console.WriteLine("What Is Your Choice?:");
+            
+            foreach (string moves in moveList)
+            {
+                Console.WriteLine(moves);
+            }
+            
+            move = Console.ReadLine();
+            validChoice = false;
+            while(validChoice == false)
+            {
+                switch (move)
+                {   
+
+                        case "rock":                                     
+                            validChoice = true;
+                            break;
+                        case "paper":
+                            validChoice = true;
+                            break;
+                        case "lizard":                                     
+                            validChoice = true;
+                            break;
+                        case "spock":                                     
+                            validChoice = true;
+                            break;
+                        case "scissors":                                     
+                            validChoice = true;
+                            break;
+                        default:
+                           validChoice = false;
+                            break;
+                }
+            }
 
         }
     }

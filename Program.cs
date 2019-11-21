@@ -8,12 +8,13 @@ namespace RPSLS
 {
     class Program
     {
+        
+        
         static void Main(string[] args)
         {
-            
-            
-
-            
+           Game gamerun = new Game();
+           gamerun.RunGame();
+                      
         }
     }
 }

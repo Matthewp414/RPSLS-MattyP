@@ -7,36 +7,17 @@ using System.Threading.Tasks;
 namespace RPSLS
 {
 
-    class Hand
+    public abstract class Hand
     {
-        List<string> moveList;
+        public List<string> moveList = new List<string>{"Rock","Paper","Scissors","Lizard","Spock" };
         public int score = 0; 
-        string move;
+        public string move;
         
 
 
-        public Hand()
-        {
-            moves.Add("Rock");
-            moves.Add("Paper");
-            moves.Add("Scissors");
-            moves.Add("Lizard");
-            moves.Add("Spock");
-            
-            
-        }
+        public abstract void ChooseMove();
 
-
-        public virtual void ChooseMove()
-        {
-            Console.WriteLine("What Is Your Choice?:");
-            foreach (string moves in moveList)
-            {
-                Console.WriteLine(moves);
-            }
-            return move = Console.ReadLine();
-
-        }
+        
 
     }
 }

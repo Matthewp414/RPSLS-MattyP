@@ -9,7 +9,7 @@ namespace RPSLS
 
     class Hand
     {
-        List<string> moves;
+        List<string> moveList;
         public int score = 0; 
         string move;
         
@@ -29,8 +29,13 @@ namespace RPSLS
 
         public virtual void ChooseMove()
         {
-            Console.WriteLine("What move?");
-            move = Console.ReadLine();
+            Console.WriteLine("What Is Your Choice?:");
+            foreach (string moves in moveList)
+            {
+                Console.WriteLine(moves);
+            }
+            return move = Console.ReadLine();
+
         }
 
     }

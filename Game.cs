@@ -19,27 +19,32 @@ namespace RPSLS
         {
             Conosle.WriteLine("Would you like to play with a 'bot' or another 'player' ");
             return Console.ReadLine();
+            Console.Clear;
+
         }
         
         
-        public void MakePlayers(choice)
+        public void MakePlayers( string choice)
         {
            switch (choice)
            {
 
                     case "bot":
                         
-                        Console.WriteLine("You Weigh 150");
-                        
+                        Console.WriteLine("You Will Be Playing Against A Bot");
+                        player1 = new HumanUser();
+                        player2 = new BotUser();
+                        Console.Clear;                        
                         validWeightChoice = true;
-
-
                         break;
 
                     case "player":
                         
-                        Console.WriteLine("You Weigh 185");
-                        
+                        Console.WriteLine("You Will Be Plaing Agianst A Freind");
+                        player1 = new HumanUser();
+                        player2 = new HumanUser();
+                        Console.ReadLine();
+                        Console.Clear;
                         validChoice = true;
 
 
@@ -61,23 +66,40 @@ namespace RPSLS
             {
                 Console.WriteLine("Player 1 wins");
                 Console.ReadLine();
+                Console.Clear;
+
+
 
             }
             else if ((move1 == "rock" && move2 == "rock") || (move1 == "spock" && move2 == "spock") || (move1 == "scissors" && move2 == "scissors") || (move1 == "paper" && move2 == "paper") || (move1 == "lizard" && move2 == "lizard"))
             { 
-            Console.WriteLine("Draw");
-            Console.ReadLine();
+                Console.WriteLine("Draw");
+                Console.ReadLine();
+                Console.Clear;
             }
             else
             {
                 Console.WriteLine("Player 2 wins");
+                Console.ReadLine();
+                Console.Clear;
+
             }
-
-
-
         }
 
-
+        public void RunGame()
+        {
+            SingleOrNot = GetPlayersChoice();
+            MakePlayers(SingleOrNot);
+            
+            while(player1.score < 2 && player2.score < 2 )
+            {
+                Console.WriteLine("player1 score:" + player1.score + " player2 score:" + player2.score);
+                Console.WriteLine("");
+                
+            }
+                
+        }
+        
 
     }
 

@@ -13,10 +13,11 @@ namespace RPSLS
         string PlayerOrBot;
         public bool validChoice;
         public bool playAgain;
-        
+        public List <string> ruleList;
         public Game()
         {
-           playAgain = true;
+           playAgain = true; 
+            
 
         }
 
@@ -28,6 +29,15 @@ namespace RPSLS
 
         }
         
+        public void DisplayRules()
+        {
+            ruleList = new List<string>{"Rock crushes Scissors ","Scissors cuts Paper ","Paper covers Rock ", "Rock crushes Lizard ", "Lizard poisons Spock ", "Spock smashes Scissors ", "Scissors decapitates Lizard",  "Lizard eats Paper", "Paper disproves Spock ", "Spock vaporizes Rock" };
+            foreach (string rule in ruleList)
+            {
+                Console.WriteLine(rule);
+            }
+            
+        }
         
         public void MakePlayers( string choice)
         {
@@ -106,7 +116,8 @@ namespace RPSLS
             GetPlayersChoice();
             MakePlayers(PlayerOrBot);
             
-            
+            DisplayRules();
+            Console.WriteLine("");
 
             
                 while(player1.score < 2 && player2.score < 2 )

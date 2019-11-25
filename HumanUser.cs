@@ -24,32 +24,33 @@ namespace RPSLS
             }
             
             move = Console.ReadLine();
-            validChoice = false;
-            while(validChoice == false)
-            {
-                switch (move)
-                {   
+            switch (move)
 
-                        case "rock":                                     
-                            validChoice = true;
-                            break;
-                        case "paper":
-                            validChoice = true;
-                            break;
-                        case "lizard":                                     
-                            validChoice = true;
-                            break;
-                        case "spock":                                     
-                            validChoice = true;
-                            break;
-                        case "scissors":                                     
-                            validChoice = true;
-                            break;
-                        default:
-                           validChoice = false;
-                            break;
-                }
+            {   
+
+                    case "rock":                                     
+                        validChoice = true;
+                        break;
+                    case "paper":
+                        validChoice = true;
+                        break;
+                    case "lizard":                                     
+                        validChoice = true;
+                        break;
+                    case "spock":                                     
+                        validChoice = true;
+                        break;
+                    case "scissors":                                     
+                        validChoice = true;
+                        break;
+                    default:
+                        Console.Clear();
+                        ChooseMove();
+                        break;
             }
+        
+               
+            
 
         }
     }
